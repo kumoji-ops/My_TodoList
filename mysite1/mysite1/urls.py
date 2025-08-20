@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from todoList.views import RegisterView
+from django.views.generic import TemplateView
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('admin/', admin.site.urls),
+    path('accounts/register/', RegisterView.as_view(), name='register'),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', include('todoList.urls')),
+    path('todo/', include('todoList.urls')),  # prefix task pages with /todo/
 ]
