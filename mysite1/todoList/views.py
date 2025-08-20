@@ -23,6 +23,8 @@ class TodoListView(LoginRequiredMixin, ListView):
         context['tasks'] = Task.objects.filter(user=self.request.user)
         context['incomplete_tasks_count'] = user_tasks.filter(completed=False).count()
         context['now'] = timezone.now()
+        return context
+
 
 #Task Create View
 class TaskCreate(LoginRequiredMixin, CreateView):
@@ -37,7 +39,7 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         return super(TaskCreate, self).form_valid(form)
     
 #Task Update View
-class TaskUpdate(LoginRequiredMixin, CreateView):
+class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     form_class = TaskForm
     template_name = 'todoList/task_update.html'
@@ -48,7 +50,7 @@ class TaskUpdate(LoginRequiredMixin, CreateView):
         return super(TaskUpdate, self).form_valid(form)
 
 #Task Delete View
-class TaskDelete(LoginRequiredMixin, CreateView):
+class TaskDelete(LoginRequiredMixin,  DeleteView):
     model = Task
     context_object_name = 'task'
     template_name = 'todoList/task_delete.html'

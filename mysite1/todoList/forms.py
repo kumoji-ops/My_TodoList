@@ -9,7 +9,7 @@ class TaskForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'placeholder': 'Enter task title'}),
             'description': forms.Textarea(attrs={'placholder': 'Enter task description'}),
             'deadline': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
-            'completed': forms.CheckboxInput(),
+            'complete': forms.CheckboxInput(),
         }
 
     def clean_title(self):
