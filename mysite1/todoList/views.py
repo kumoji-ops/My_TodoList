@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView
-from djnago.contrib.auth.mixins import LoginRequiredMixin
-from djnago.contrib.auth.forms  import UserCreationForm
-from djnago.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.forms  import UserCreationForm
+from django.urls import reverse_lazy
 from .models import Task
 from .forms import TaskForm
 from django.contrib import messages
