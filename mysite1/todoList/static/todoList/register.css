@@ -1,0 +1,103 @@
+/* Center the register box on the page */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* full height */
+    background: linear-gradient(to right, #654ea3, #eaafc8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The register box itself */
+.register-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* NEW: Limit height and allow scrolling */
+    max-height: 80vh; /* at most 80% of viewport height */
+    overflow-y: auto; /* scroll if content is too long */
+}
+
+.register-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading style */
+.register-box h2 {
+    margin-bottom: 1rem; /* reduced from 1.5rem */
+    color: #333;
+}
+
+/* Form paragraphs */
+.register-box form p {
+    text-align: left;
+    margin-bottom: 0.5rem; /* reduced from 1rem */
+}
+
+/* Optional: reduce margin for password/help text */
+.register-box ul {
+    margin: 0.3rem 0 0.8rem 1.2rem; /* top right left bottom */
+    padding-left: 1rem;
+}
+
+/* Inputs */
+.register-box input {
+    width: 100%;
+    padding: 0.65rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem; /* reduced from 0.8rem */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-box input:focus {
+    border-color: #ff6f91;
+    box-shadow: 0 0 8px rgba(255, 111, 145, 0.4);
+    outline: none;
+}
+
+/* Button */
+.register-box .btn {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.8rem; /* new */
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-box .btn:hover {
+    background-color: #654ea3;
+    transform: translateY(-2px);
+}
+
+/* Links */
+.register-box p.mt-3 a {
+    color: #ff6f91;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-box p.mt-3 a:hover {
+    color: #ff9a9e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .register-box {
+        padding: 2rem 1.5rem;
+    }
+}

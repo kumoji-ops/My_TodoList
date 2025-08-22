@@ -1,0 +1,61 @@
+/* Center the login box on the page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* fill entire screen */
+    background: linear-gradient(to right, #654ea3, #eaafc8);
+}
+
+/* The login box itself */
+.login-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+/* Heading style */
+.login-box h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Style form fields */
+.login-box form p {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Style the login button */
+.btn {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #654ea3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #eaafc8;
+}
+
+/* Link under the form */
+.login-box p.mt-3 {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
