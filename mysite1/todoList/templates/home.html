@@ -1,93 +1,17 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
 
-    <style>
-     @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Outfit:wght@100..900&display=swap');
-        body {
-          background: #654ea3;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-            height: 100vh;
-            margin: 0;
-        }
-        
-        
-        .top-right {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-        }
-
-        .top-right a {
-            color: #ffffff;
-            margin-left: 20px;
-            font-size: 30px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-       .heading {
-    position: absolute;
-    top: 180px;        /* distance from top of the screen */
-    left: 410px;        /* distance from left side */
-    font-size: 60px;
-    color: #ffffff;
-    text-align: left; 
-    font-weight: bold; /* change this if needed */
-}
-
-      .Logo {
-    position: absolute;         /* enables moving it freely */
-    left: 30px;                /* move right from the left edge */
-    top: 15px;                  /* move down from the top edge */
-    font-size: 32px;
-    color: #ffffff;
-    font-weight: bold;
-}
-.subheading2 {
-    position: absolute;         /* enables moving it freely */
-    left: 480px;                /* move right from the left edge */
-    top: 260px;                  /* move down from the top edge */
-    font-size: 32px;
-    color: #ffffff;
-}
-.subheading3{
-    position: absolute;         /* enables moving it freely */
-    left: 550px;                /* move right from the left edge */
-    top: 300px;                  /* move down from the top edge */
-    font-size: 32px;
-    color: #ffffff;
-}
-.funnel-display {
-  font-family: "Funnel Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.outfit{
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-}
-
-
-    </style>
-</head>
-<body>
-     <div class="top-right">
+{% block content %}
+<div class="home-page">
+    <div class="top-right">
         <a href="{% url 'login' %}">log in</a>
         <a href="{% url 'register' %}">sign in</a>
     </div>
-    <div class="Logo">ZenDo.</div>
-    <div class="heading">Your day, your flow.</div>
-    <div class="subheading2">Because every goal deserves </div>
-    <div class="subheading3">your full attention</div>
-    
 
-</body>
-</html>
+    <div class="Logo">ZenDo.</div>
+
+    <div class="heading delius-swash-caps-regular">Your day, your flow.</div>
+    <div class="subheading2 delius-swash-caps-regular">Because every goal deserves</div>
+    <div class="subheading3 delius-swash-caps-regular">your full attention</div>
+</div>
+{% endblock %}

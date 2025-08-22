@@ -1,3 +1,7 @@
+
+  
+/* General styles */
+
 a {
     text-decoration: none;
 }
@@ -9,6 +13,7 @@ h1 {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    font-family: "Delius Swash Caps", cursive;
 }
 
 h2 {
@@ -27,13 +32,11 @@ h2 {
 }
 
 body {
-    background-color: #a7c7d6; /* Light blue (you can change this) */
+    background-color: #a7c7d6;
     height: 100vh;
     margin: 0;
-    font-family: "Nata Sans", sans-serif;
+    font-family: "Delius Swash Caps", cursive;
 }
-
-
 
 
 .container {

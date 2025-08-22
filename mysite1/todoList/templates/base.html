@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Task Manager{% endblock %}</title>
 
-    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
-
-    <!-- Load Static files -->
     {% load static %}
 
- 
-    <!-- Custom CSS -->
+    <!-- Global CSS -->
     <link rel="stylesheet" href="{% static 'todoList/styles.css' %}">
+    <!-- Home page CSS -->
+    <link rel="stylesheet" href="{% static 'todoList/home.css' %}">
 
-    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
 </head>
 
-<body class="container p-4">
+
 
     <!-- Display messages -->
     <div class="toast-container position-relative top-0 end-0 p-3 ml-6">
@@ -32,14 +32,12 @@
         </div>
         {% endfor %}
         {% endif %}
-
     </div>
 
     <main>
         {% block content %}
-    <h1 class=""> Get Done <span class="done-icon">✔</span></h1>
-  {% endblock %}
-
+        <h1>Get Done <span class="done-icon">✔</span></h1>
+        {% endblock %}
     </main>
 
     <!-- Bootstrap JS and Popper.js -->
