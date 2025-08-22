@@ -2,12 +2,17 @@
 {% block title %}Create Task{% endblock %}
 {% block content %}
 
-<h2 class="mb-4">Create Task</h2>
-<form method="post" class="card p-4">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="btn btn-success" type="submit">Save</button>
-    <a href="{% url 'todoList' %}" class="btn btn-secondary mt-1">Cancel</a>
-</form>
+<!-- Overlay background -->
+<div class="overlay">
+    <!-- Popup window -->
+    <div class="popup-window">
+        <h2 class="mb-3">Create Task</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn-save" type="submit">Save</button>
+        </form>
+    </div>
+</div>
 
 {% endblock %}
