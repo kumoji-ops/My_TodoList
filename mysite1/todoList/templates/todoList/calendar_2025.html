@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Interactive Calendar 2025{% endblock %}
+
+{% block content %}
+<div id="calendar" style="max-width: 900px; margin: 40px auto;"></div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        initialDate: '2025-01-01',
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        navLinks: true,
+        selectable: true,
+        dateClick: function(info) {
+            alert('Clicked on: ' + info.dateStr);
+        },
+        events: [
+            { title: 'New Year', start: '2025-01-01' }
+        ]
+    });
+    calendar.render();
+});
+</script>
+{% endblock %}

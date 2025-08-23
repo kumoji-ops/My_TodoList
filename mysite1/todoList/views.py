@@ -92,3 +92,7 @@ class CustomLoginView(LoginView):
 def home(request):
     return render(request, 'home.html')
 
+# calendar view
+
+def calendar_2025(request):
+    return render(request, 'todoList/calendar_2025.html')
