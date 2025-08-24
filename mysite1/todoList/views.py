@@ -94,5 +94,3 @@ def home(request):
 
 # calendar view
 
-def calendar_2025(request):
-    return render(request, 'todoList/calendar_2025.html')
