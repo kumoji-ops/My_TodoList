@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* fill entire screen */
-    background: linear-gradient(to right, #654ea3, #eaafc8);
+    background: #296287;
 }
 
 /* The login box itself */
@@ -39,7 +39,7 @@
 }
 
 /* Style the login button */
-.btn {
+.btn {  
     width: 100%;
     padding: 0.7rem;
     background-color: #654ea3;

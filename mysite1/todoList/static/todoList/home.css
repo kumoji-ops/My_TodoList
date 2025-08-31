@@ -1,73 +1,95 @@
-
-
 .home-page {
-    min-height: 100vh;
     position: relative;
-    background: url("{% static 'todoList/images/home-page.png' %}") no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    box-sizing: border-box;
+    min-height: 100vh;
 }
-        
-        .top-right {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-        }
 
-        .top-right a {
-            color: #ffffff;
-            margin-left: 20px;
-            font-size: 30px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Background image stays fixed */
+.home-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Ensure it stays behind other content */
+}
 
-       .heading {
+.top-right {
     position: absolute;
-    top: 180px;        /* distance from top of the screen */
-    left: 410px;        /* distance from left side */
+    top: 20px;
+    right: 40px;
+}
+
+.top-right a {
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.heading {
+    position: absolute;
+    top: 180px;
+    /* distance from top of the screen */
+    left: 410px;
+    /* distance from left side */
     font-size: 60px;
     color: #ffffff;
-    text-align: left; 
-    font-weight: bold; /* change this if needed */
+    text-align: left;
+    font-weight: bold;
+    /* change this if needed */
 }
 
-      .Logo {
-    position: absolute;         /* enables moving it freely */
-    left: 30px;                /* move right from the left edge */
-    top: 15px;                  /* move down from the top edge */
+.Logo {
+    position: absolute;
+    /* enables moving it freely */
+    left: 30px;
+    /* move right from the left edge */
+    top: 15px;
+    /* move down from the top edge */
     font-size: 32px;
     color: #ffffff;
     font-weight: bold;
 }
+
 .subheading2 {
-    position: absolute;         /* enables moving it freely */
-    left: 480px;                /* move right from the left edge */
-    top: 260px;                  /* move down from the top edge */
+    position: absolute;
+    /* enables moving it freely */
+    left: 480px;
+    /* move right from the left edge */
+    top: 260px;
+    /* move down from the top edge */
     font-size: 32px;
     color: #ffffff;
-}
-.subheading3{
-    position: absolute;         /* enables moving it freely */
-    left: 550px;                /* move right from the left edge */
-    top: 300px;                  /* move down from the top edge */
-    font-size: 32px;
-    color: #ffffff;
-}
-.funnel-display {
-  font-family: "Funnel Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
 }
 
-.outfit{
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
+.subheading3 {
+    position: absolute;
+    /* enables moving it freely */
+    left: 550px;
+    /* move right from the left edge */
+    top: 300px;
+    /* move down from the top edge */
+    font-size: 32px;
+    color: #ffffff;
 }
+
+.funnel-display {
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.outfit {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
 .delius-swash-caps-regular {
     font-family: "Delius Swash Caps", cursive;
 }

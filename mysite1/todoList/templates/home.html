@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
-<div class="home-page">
-    <img src="{% static 'todoList/images/home_page.png' %}" alt="Home Page Image" class="home-image" />
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'todoList/home.css' %}">
+{% endblock %}
 
+{% block content %}
+<div class="home-page" class="home-image" >
+    
+  <img src="{% static 'todoList/images/home_page11.png' %}" 
+         alt="Home Page Image" class="home-image" />
     <div class="top-right">
         <a href="{% url 'login' %}">log in</a>
         <a href="{% url 'register' %}">sign in</a>
@@ -12,7 +17,7 @@
 
     <div class="Logo">ZenDo.</div>
 
-    <div class="heading delius-swash-caps-regular">Your day, your flow.</div>
+    <div class="heading delius-swash-caps-regular home-image">Your day, your flow.</div>
     <div class="subheading2 delius-swash-caps-regular">Because every goal deserves</div>
     <div class="subheading3 delius-swash-caps-regular">your full attention</div>
 </div>
